@@ -19,7 +19,7 @@ printf "${GREEN}Zsh and oh-my-zsh installed${NC}\n"
 sleep 1s
 
 # Install NVM and put needed lines at end of zsh
-printf "${GREEN}Installing NVM and node v16${NC}\n"
+printf "${GREEN}Installing NVM, node v16 and YARN${NC}\n"
 sleep 1s
 curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.3/install.sh | bash
 
@@ -30,7 +30,8 @@ echo '[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This
 
 source ~/.zsh
 nvm install v16
-printf "${GREEN}Finished installing NVM and node v16${NC}\n"
+npm -g install yarn
+printf "${GREEN}Finished installing NVM, node v16 and YARN${NC}\n"
 sleep 1s
 
 # Install Powerlevel10k
