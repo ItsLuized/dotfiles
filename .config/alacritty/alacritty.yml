@@ -1,0 +1,68 @@
+window:
+  opacity: 0.85
+
+font:
+  size: 14.0
+
+# Catppuccin!
+colors:
+  # Default colors
+  primary:
+    background: '0x1E1D2F'
+    foreground: '0xD9E0EE'
+
+  # Colors the cursor will use if `custom_cursor_colors` is true
+  cursor:
+    text: '0x1E1D2F'
+    cursor: '0xF5E0DC'
+
+  # Normal colors
+  normal:
+    black:   '0x6E6C7E'
+    red:     '0xF28FAD'
+    green:   '0xABE9B3'
+    yellow:  '0xFAE3B0'
+    blue:    '0x96CDFB'
+    magenta: '0xF5C2E7'
+    cyan:    '0x89DCEB'
+    white:   '0xD9E0EE'
+
+  # Bright colors
+  bright:
+    black:   '0x988BA2'
+    red:     '0xF28FAD'
+    green:   '0xABE9B3'
+    yellow:  '0xFAE3B0'
+    blue:    '0x96CDFB'
+    magenta: '0xF5C2E7'
+    cyan:    '0x89DCEB'
+    white:   '0xD9E0EE'
+
+  indexed_colors:
+    - { index: 16, color: '0xF8BD96' }
+    - { index: 17, color: '0xF5E0DC' }
+
+key_bindings:
+# (macOS only)
+  #- { key: K,              mods: Command, mode: ~Vi|~Search, chars: "\x0c"                 }
+  #- { key: K,              mods: Command, mode: ~Vi|~Search, action: ClearHistory          }
+  #- { key: Key0,           mods: Command,                    action: ResetFontSize         }
+  - { key: Equals,         mods: Command,                    action: IncreaseFontSize      }
+  #- { key: Plus,           mods: Command,                    action: IncreaseFontSize      }
+  #- { key: NumpadAdd,      mods: Command,                    action: IncreaseFontSize      }
+  - { key: Minus,          mods: Command,                    action: DecreaseFontSize      }
+  #- { key: NumpadSubtract, mods: Command,                    action: DecreaseFontSize      }
+  - { key: V,              mods: Command,                    action: Paste                 }
+  - { key: C,              mods: Command,                    action: Copy                  }
+  #- { key: C,              mods: Command, mode: Vi|~Search,  action: ClearSelection        }
+  #- { key: H,              mods: Command,                    action: Hide                  }
+  #- { key: H,              mods: Command|Alt,                action: HideOtherApplications }
+  #- { key: M,              mods: Command,                    action: Minimize              }
+  #- { key: Q,              mods: Command,                    action: Quit                  }
+  #- { key: W,              mods: Command,                    action: Quit                  }
+  #- { key: N,              mods: Command,                    action: SpawnNewInstance      }
+  #- { key: F,              mods: Command|Control,            action: ToggleFullscreen      }
+  #- { key: F,              mods: Command, mode: ~Search,     action: SearchForward         }
+  #- { key: B,              mods: Command, mode: ~Search,     action: SearchBackward        }
+  - { key: Right, mods: Alt, chars: "\x1BF" }
+  - { key: Left,  mods: Alt, chars: "\x1BB" }
