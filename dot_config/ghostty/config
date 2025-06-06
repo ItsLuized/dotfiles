@@ -1,0 +1,4 @@
+# For splitting into multiple files use the following
+# config-file = some/relative/sub/config
+# or
+# config-file = /absolute/path/config
