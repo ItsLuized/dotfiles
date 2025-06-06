@@ -1,0 +1,14 @@
+# When opening terminal, show fastfetch
+if [[ ${EUID} != 0 ]]; then
+	fastfetch
+fi
+
+# Custom liases
+alias ll="ls -a"
+alias vim="nvim"
+alias vi="nvim"
+alias ..="cd .."
+alias ...="cd ../.."
+alias ....='cd ../../..'
+alias .....='cd ../../../..'
+alias ......='cd ../../../../..'
