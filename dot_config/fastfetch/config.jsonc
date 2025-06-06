@@ -1,0 +1,225 @@
+{
+    "$schema": "https://github.com/fastfetch-cli/fastfetch/raw/dev/doc/json_schema.json",
+
+    "logo": {
+        "padding": {
+            "top": 2,               // Top padding
+            "left": 1,              // Left padding
+            "right": 4              // Right padding
+        },
+ //       "color": {                  // Override logo colors
+ //         "1": "default",
+ //         "2": "default"
+ //       }
+    },
+
+    "display": {
+        "separator": "    ",
+        "constants": [
+            "─────────────────"     // {$1}, used in Custom module
+        ],
+        "color": {
+            "keys": "bright_yellow",      // Key color
+            "title": "default"      // Title color
+        },
+        "key": {
+            "width": 9,             // Aligns keys to this width
+            "type": "icon",         // string, icon, both, or none
+            "paddingLeft": 2        // Set the left padding of keys
+        },
+        "bar": {
+            "width": 10,            // Width of percentage bars
+            "borderLeft": "[ ",     // Set the string to use at left border
+            "borderRight": " ]",    // Set the string to use at right border
+            "charElapsed": "■",     // Character for elapsed portion
+            "charTotal": "-"        // Character for total portion
+        },
+        "percent": {
+            "type": 9,              // 1=number, 2=bar, 3=both, 9=colored number
+            "ndigits": 0,
+            "color": {
+                "green": "light_green",
+                "yellow": "light_yellow",
+                "red": "light_red"
+            }
+        },
+        "temp": {
+            "unit": "C",
+            "ndigits": 1,
+            "color": {
+                "green": "light_green",
+                "yellow": "light_yellow",
+                "red": "light_red"
+            }
+        }
+    },
+
+    "modules": [
+        {
+            "type": "title",
+            "format": "{#1}  {user-name}{#}{#1}@{#1}{host-name}    Eat {#}{#32}{#} , {#1}Sleep {#}{#32}󰋣{#} , {#1}Linux {#}{#32}{#}",
+            "color": {
+                "user": "bold_blue",
+                "at": "bold_default",
+                "host": "bold_blue"
+            }
+        },
+        {
+            "type": "custom",
+            "format": "┌{$1}─── OS Information ───{$1}┐",
+            "outputColor": "green"
+        },
+        {
+            "type": "os",
+            "key": "OS",
+ //           "keyIcon": ""
+        },
+        {
+            "type": "host",
+            "key": "Host",
+            "key": "󰌢"
+        },
+        {
+            "type": "kernel",
+            "key": "Kernel",
+            "keyIcon": ""
+        },
+        {
+            "type": "shell",
+            "key": "Shell",
+            "keyIcon": ""
+        },
+        {
+            "type": "packages",
+            "key": "Packages",
+            "keyIcon": "󱙝"
+        },
+        {
+            "type": "uptime",
+            "key": "Uptime",
+            "keyIcon": "󰅐"
+        },
+        {
+            "type": "custom",
+            "format": "├{$1} Hardware Information {$1}┤",
+            "outputColor": "green"
+        },
+//        {
+//            "type": "board",
+//            "key": "Board",
+//            "keyIcon": "󰌢"
+//        },
+        {
+            "type": "cpu",
+            "temp": true,
+            "key": "CPU",
+            "keyIcon": ""
+        },
+        {
+            "type": "gpu",
+            "driverSpecific": true,
+            "temp": true,
+            "key": "GPU",
+            "keyIcon": "󰾲"
+        },
+        {
+            "type": "memory",
+            "key": "Memory",
+            "keyIcon": ""
+        },
+//        {
+//            "type": "swap",
+//            "key": "Swap",
+//            "keyIcon": "󰓡"
+//        },
+        {
+            "type": "display",
+            "key": "Display",
+            "keyIcon": "󰍹"
+        },
+        {
+            "type": "disk",
+            "folders": "/",
+            "key": "Disk",
+            "keyIcon": ""
+        },
+        {
+            "type": "disk",
+            "folders": "/mnt/nvme",
+            "key": "Disk",
+            "keyIcon": ""
+        },
+        {
+            "type": "disk",
+            "folders": "/mnt/ntfs",
+            "key": "Disk",
+            "keyIcon": ""
+        },
+        {
+            "type": "custom",
+            "format": "├{$1} Software Information {$1}┤",
+            "outputColor": "green"
+        },
+        {
+            "type": "de",
+            "key": "DE",
+            "keyIcon": ""
+        },
+        {
+            "type": "wm",
+            "key": "WM",
+            "keyIcon": ""
+        },
+        {
+            "type": "theme",
+            "key": "Theme",
+            "keyIcon": "󰉼"
+        },
+        {
+            "type": "terminal",
+            "key": "Terminal",
+            "keyIcon": ""
+        },
+        {
+            "type": "terminalfont",
+            "key": "Font",
+            "keyIcon": ""
+        },
+        {
+            "type": "custom",
+            "format": "└{$1}──────────────────────{$1}┘",
+            "outputColor": "green"
+        },
+        {
+            "type": "custom",
+            "format": "  {#}󰮯{#}    {#30}󰊠{#}    {#31}󰊠{#}    {#32}󰊠{#}    {#33}󰊠{#}    {#34}󰊠{#}    {#35}󰊠{#}    {#36}󰊠{#}    {#37}󰊠{#}"
+        },
+//        {
+//            "type": "custom",
+//            "format": "  {#}{#1}󰮯{#}    {#90}󰊠{#}    {#91}󰊠{#}    {#92}󰊠{#}    {#93}󰊠{#}    {#94}󰊠{#}    {#95}󰊠{#}    {#96}󰊠{#}    {#97}󰊠{#}"
+//        },
+        "break"
+    ]
+}
+
+/*
+=========================================
+ANSI Standard Foreground Colors Reference
+=========================================
+
+| Color Name | ANSI Normal | Fastfetch | ANSI Bright | Fastfetch | ANSI Bold    | Fastfetch |
+|------------|-------------|-----------|-------------|-----------|--------------|-----------|
+| Black      | \u001b[30m  | {#30}     | \u001b[90m  | {#90}     | \u001b[1;30m | {#1}{#30} |
+| Red        | \u001b[31m  | {#31}     | \u001b[91m  | {#91}     | \u001b[1;31m | {#1}{#31} |
+| Green      | \u001b[32m  | {#32}     | \u001b[92m  | {#92}     | \u001b[1;32m | {#1}{#32} |
+| Yellow     | \u001b[33m  | {#33}     | \u001b[93m  | {#93}     | \u001b[1;33m | {#1}{#33} |
+| Blue       | \u001b[34m  | {#34}     | \u001b[94m  | {#94}     | \u001b[1;34m | {#1}{#34} |
+| Magenta    | \u001b[35m  | {#35}     | \u001b[95m  | {#95}     | \u001b[1;35m | {#1}{#35} |
+| Cyan       | \u001b[36m  | {#36}     | \u001b[96m  | {#96}     | \u001b[1;36m | {#1}{#36} |
+| White      | \u001b[37m  | {#37}     | \u001b[97m  | {#97}     | \u001b[1;37m | {#1}{#37} |
+
+|-------------|--------------|
+| ANSI Reset  | \u001b[0m    |
+| Fastfetch   | {#}          |
+
+*/
